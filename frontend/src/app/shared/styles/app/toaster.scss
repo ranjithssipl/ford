@@ -1,0 +1,13 @@
+@import '../node_modules/angular2-toaster/src/toaster';
+
+// Customization
+#toast-container>div {
+    top: 65px;
+    .toaster-icon {
+        background-size: 19px;
+    }
+    button.toast-close-button {
+        right: auto;
+        top: -0.1em;
+    }
+}

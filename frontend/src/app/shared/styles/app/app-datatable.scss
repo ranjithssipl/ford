@@ -1,0 +1,522 @@
+@import '~@swimlane/ngx-datatable/release/index.css';
+// @import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+$table-header-border-color: #e3e3e3;
+$table-border-color: #f3f3f2;
+$table-head-background-color: #f5f7f8;
+// .datatable-header,
+// .datatable-body {
+//     border-left: 1px solid $table-border-color;
+//     border-right: 1px solid $table-border-color;
+// }
+.datatable-body {
+    border-top: none;
+}
+
+.datatable-header {
+    height: auto !important;
+}
+
+.datatable-row-center {
+    width: 100%;
+}
+
+.datatable-scroll {
+    width: 100%;
+}
+
+// header
+.datatable-header-cell {
+    padding: 10px 0;
+    background-color: $table-head-background-color;
+    border-right: 1px solid $table-header-border-color;
+    border-bottom: 1px solid $table-header-border-color;
+}
+
+.datatable-header .datatable-header-inner:first-child .datatable-header-cell {
+    border-top: 1px solid $table-header-border-color;
+}
+
+.datatable-header-cell:first-child {
+    border-left: 1px solid $table-header-border-color;
+}
+
+.datatable-header-cell:last-child {
+    border-right: 1px solid $table-header-border-color;
+}
+.datatable-header-cell-template-wrap, .datatable-body-cell-template-wrap {
+    line-height: 1.4em;
+    white-space: normal;
+}
+// body
+.datatable-body-cell {
+    border-right: 1px solid $table-border-color;
+    border-bottom: 1px solid $table-border-color;
+}
+
+.datatable-body-cell:first-child {
+    border-left: 1px solid $table-border-color;
+}
+
+.datatable-header-cell-template-wrap,
+.datatable-body-cell-label {
+    padding: 4px 10px;
+}
+
+.filter-row {
+    margin-bottom: 20px;
+}
+
+.datatable-footer {
+    margin-top: 15px;
+}
+
+// Pagination
+.datatable-pager .pager li a {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    padding: .5rem 1.1rem;
+    margin-left: -1px;
+    color: $theme-primary;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0;
+    font-size: 16px;
+    :hover {
+        background-color: #f8f8f8;
+    }
+    i:before {
+        top: 3px;
+        position: relative;
+    }
+}
+
+.datatable-pager .pager li:first-child a {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.datatable-pager .pager li:last-child a {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.datatable-pager .pager li.active a {
+    color: white;
+    background: $theme-primary;
+}
+
+.datatable-pager .pager li.disabled a {
+    cursor: auto;
+    color: #afb4b8;
+}
+
+.datatable-pager .pager li.disabled a:hover {
+    background: transparent;
+}
+
+// Relative width
+@mixin width-percentage($percentage) {
+    width: ($percentage);
+}
+
+.width-1 {
+    @include width-percentage(1%);
+}
+
+.width-2 {
+    @include width-percentage(2%);
+}
+
+.width-3 {
+    @include width-percentage(3%);
+}
+
+.width-4 {
+    @include width-percentage(4%);
+}
+
+.width-5 {
+    @include width-percentage(5%);
+}
+
+.width-6 {
+    @include width-percentage(6%);
+}
+
+.width-7 {
+    @include width-percentage(7%);
+}
+
+.width-8 {
+    @include width-percentage(8%);
+}
+
+.width-9 {
+    @include width-percentage(9%);
+}
+
+.width-10 {
+    @include width-percentage(10%);
+}
+
+.width-11 {
+    @include width-percentage(11%);
+}
+
+.width-12 {
+    @include width-percentage(12%);
+}
+
+.width-13 {
+    @include width-percentage(13%);
+}
+
+.width-14 {
+    @include width-percentage(14%);
+}
+
+.width-15 {
+    @include width-percentage(15%);
+}
+
+.width-16 {
+    @include width-percentage(16%);
+}
+
+.width-17 {
+    @include width-percentage(17%);
+}
+
+.width-18 {
+    @include width-percentage(18%);
+}
+
+.width-19 {
+    @include width-percentage(19%);
+}
+
+.width-20 {
+    @include width-percentage(20%);
+}
+
+.width-21 {
+    @include width-percentage(21%);
+}
+
+.width-22 {
+    @include width-percentage(22%);
+}
+
+.width-23 {
+    @include width-percentage(23%);
+}
+
+.width-24 {
+    @include width-percentage(24%);
+}
+
+.width-25 {
+    @include width-percentage(25%);
+}
+
+.width-26 {
+    @include width-percentage(26%);
+}
+
+.width-27 {
+    @include width-percentage(27%);
+}
+
+.width-28 {
+    @include width-percentage(28%);
+}
+
+.width-29 {
+    @include width-percentage(29%);
+}
+
+.width-30 {
+    @include width-percentage(30%);
+}
+
+.width-31 {
+    @include width-percentage(31%);
+}
+
+.width-32 {
+    @include width-percentage(32%);
+}
+
+.width-33 {
+    @include width-percentage(33%);
+}
+
+.width-34 {
+    @include width-percentage(34%);
+}
+
+.width-35 {
+    @include width-percentage(35%);
+}
+
+.width-36 {
+    @include width-percentage(36%);
+}
+
+.width-37 {
+    @include width-percentage(37%);
+}
+
+.width-38 {
+    @include width-percentage(38%);
+}
+
+.width-39 {
+    @include width-percentage(39%);
+}
+
+.width-40 {
+    @include width-percentage(40%);
+}
+
+.width-41 {
+    @include width-percentage(41%);
+}
+
+.width-42 {
+    @include width-percentage(42%);
+}
+
+.width-43 {
+    @include width-percentage(43%);
+}
+
+.width-44 {
+    @include width-percentage(44%);
+}
+
+.width-45 {
+    @include width-percentage(45%);
+}
+
+.width-46 {
+    @include width-percentage(46%);
+}
+
+.width-47 {
+    @include width-percentage(47%);
+}
+
+.width-48 {
+    @include width-percentage(48%);
+}
+
+.width-49 {
+    @include width-percentage(49%);
+}
+
+.width-50 {
+    @include width-percentage(50%);
+}
+
+.width-51 {
+    @include width-percentage(51%);
+}
+
+.width-52 {
+    @include width-percentage(52%);
+}
+
+.width-53 {
+    @include width-percentage(53%);
+}
+
+.width-54 {
+    @include width-percentage(54%);
+}
+
+.width-55 {
+    @include width-percentage(55%);
+}
+
+.width-56 {
+    @include width-percentage(56%);
+}
+
+.width-57 {
+    @include width-percentage(57%);
+}
+
+.width-58 {
+    @include width-percentage(58%);
+}
+
+.width-59 {
+    @include width-percentage(59%);
+}
+
+.width-60 {
+    @include width-percentage(60%);
+}
+
+.width-61 {
+    @include width-percentage(61%);
+}
+
+.width-62 {
+    @include width-percentage(62%);
+}
+
+.width-63 {
+    @include width-percentage(63%);
+}
+
+.width-64 {
+    @include width-percentage(64%);
+}
+
+.width-65 {
+    @include width-percentage(65%);
+}
+
+.width-66 {
+    @include width-percentage(66%);
+}
+
+.width-67 {
+    @include width-percentage(67%);
+}
+
+.width-68 {
+    @include width-percentage(68%);
+}
+
+.width-69 {
+    @include width-percentage(69%);
+}
+
+.width-70 {
+    @include width-percentage(70%);
+}
+
+.width-71 {
+    @include width-percentage(71%);
+}
+
+.width-72 {
+    @include width-percentage(72%);
+}
+
+.width-73 {
+    @include width-percentage(73%);
+}
+
+.width-74 {
+    @include width-percentage(74%);
+}
+
+.width-75 {
+    @include width-percentage(75%);
+}
+
+.width-76 {
+    @include width-percentage(76%);
+}
+
+.width-77 {
+    @include width-percentage(77%);
+}
+
+.width-78 {
+    @include width-percentage(78%);
+}
+
+.width-79 {
+    @include width-percentage(79%);
+}
+
+.width-80 {
+    @include width-percentage(80%);
+}
+
+.width-81 {
+    @include width-percentage(81%);
+}
+
+.width-82 {
+    @include width-percentage(82%);
+}
+
+.width-83 {
+    @include width-percentage(83%);
+}
+
+.width-84 {
+    @include width-percentage(84%);
+}
+
+.width-85 {
+    @include width-percentage(85%);
+}
+
+.width-86 {
+    @include width-percentage(86%);
+}
+
+.width-87 {
+    @include width-percentage(87%);
+}
+
+.width-88 {
+    @include width-percentage(88%);
+}
+
+.width-89 {
+    @include width-percentage(89%);
+}
+
+.width-90 {
+    @include width-percentage(90%);
+}
+
+.width-91 {
+    @include width-percentage(91%);
+}
+
+.width-92 {
+    @include width-percentage(92%);
+}
+
+.width-93 {
+    @include width-percentage(93%);
+}
+
+.width-94 {
+    @include width-percentage(94%);
+}
+
+.width-95 {
+    @include width-percentage(95%);
+}
+
+.width-96 {
+    @include width-percentage(96%);
+}
+
+.width-97 {
+    @include width-percentage(97%);
+}
+
+.width-98 {
+    @include width-percentage(98%);
+}
+
+.width-99 {
+    @include width-percentage(99%);
+}
+
+.width-100 {
+    @include width-percentage(100%);
+}

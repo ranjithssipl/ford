@@ -1,0 +1,91 @@
+<div class="wrapper remove_margin">
+    <!-- START row-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <form [formGroup]="seriesForm" class="form-validate form-horizontal"
+                    (submit)="submitForm(seriesForm.value)" novalidate="">
+                    <!-- START panel-->
+                    <div class="panel panel-default default-margin">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Series</label>
+                                <div class="col-sm-6">
+                                    <ng-select [items]="series" (selected)="seriesChange($event)"
+                                        placeholder="Select Series" formControlName="series"></ng-select>
+                                    <span class="text-danger"
+                                        *ngIf="seriesForm.controls['series'].hasError('required') && (seriesForm.controls['series'].dirty || seriesForm.controls['series'].touched)">This
+                                        field is required</span>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Program</label>
+                                <div class="col-sm-6">
+                                    <ng-select [items]="program" (selected)="programChange($event)"
+                                        placeholder="Select Program" formControlName="program"></ng-select>
+                                        <span class="text-danger"
+                                        *ngIf="seriesForm.controls['program'].hasError('required') && (seriesForm.controls['program'].dirty || seriesForm.controls['program'].touched)">This
+                                        field is required</span>                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Sheets</label>
+                                <div class="col-sm-6">
+                                    <ng-select [items]="sheets" [allowClear]="true"
+                                        (selected)="sheetsChange($event, 'selected')" placeholder="Select Sheets"
+                                        formControlName="sheets" [multiple]="true"
+                                        (removed)="sheetsChange($event, 'removed')"></ng-select>
+                                        <span class="text-danger"
+                                        *ngIf="seriesForm.controls['sheets'].hasError('required') && (seriesForm.controls['sheets'].dirty || seriesForm.controls['sheets'].touched)">This
+                                        field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Headers</label>
+                                <div class="col-sm-6">
+                                    <ng-select [items]="headers" [allowClear]="true"
+                                        (selected)="headerChange($event, 'selected')" placeholder="Select Headers"
+                                        formControlName="headers" [multiple]="true"
+                                        (removed)="headerChange($event, 'removed')"></ng-select>
+                                        <span class="text-danger"
+                                        *ngIf="seriesForm.controls['headers'].hasError('required') && (seriesForm.controls['headers'].dirty || seriesForm.controls['headers'].touched)">This
+                                        field is required</span>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Time Series</label>
+                                <div class="col-sm-6">
+                                    <ng-select [items]="time_series" [allowClear]="true"
+                                        (selected)="timeChange($event, 'selected')" placeholder="Select Time Series"
+                                        formControlName="time_series" [multiple]="true"
+                                        (removed)="timeChange($event, 'removed')">
+                                    </ng-select>
+                                    <span class="text-danger"
+                                        *ngIf="seriesForm.controls['time_series'].hasError('required') && (seriesForm.controls['time_series'].dirty || seriesForm.controls['time_series'].touched)">This
+                                        field is required</span>
+                                </div>
+                                <div>
+                                    <button class="btn btn-link" (click)="onSelectAll()">Select All</button>
+                                    <button class="btn btn-link" (click)="onClearAll()">Clear All</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="this.selected_time.length" [chart]="signalChart" class="demo"
+                            style="width: 100%;background: #f5f5f5;">
+                        </div>
+
+                        <div *ngIf="this.selected_time.length" class="panel-footer text-center">
+                            <button class="btn btn-fft" type="submit">Get FFT</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <!-- END row-->
+
+    </div>
+</div>

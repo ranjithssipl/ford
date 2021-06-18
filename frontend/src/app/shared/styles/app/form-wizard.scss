@@ -1,0 +1,100 @@
+/* ========================================================================
+   Component: form-wizard.less
+ ========================================================================== */
+ .form-wizard > ol {
+    list-style-type: none;
+    padding: 0 15px;
+  }
+  .form-wizard > ol > li {
+    min-height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fcfcfc;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .form-wizard > ol > li > a {
+    text-decoration: none;
+  }
+  .form-wizard > ol > li .label {
+    background-color: #5d9cec;
+    vertical-align: super;
+    margin-right: 6px;
+  }
+  .form-wizard > ol > li .label[href]:hover,
+  .form-wizard > ol > li .label[href]:focus {
+    background-color: #2f80e7;
+  }
+  .form-wizard > ol > li h4 {
+    display: inline-block;
+    color: #515253;
+  }
+  .form-wizard > ol > li small {
+    display: block;
+    color: #909FA7;
+  }
+  .form-wizard > ol > li.active {
+    background-color: #5d9cec;
+  }
+  .form-wizard > ol > li.active h4,
+  .form-wizard > ol > li.active small {
+    color: #fff;
+  }
+  .form-wizard > ol > li.active .label {
+    background-color: #fff;
+    border-color: #fff;
+    color: #5d9cec;
+  }
+  .form-wizard .bwizard-buttons {
+    margin: 0;
+  }
+  .form-wizard .well {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 0 #000;
+  }
+  .form-wizard .well fieldset {
+    margin: 0;
+  }
+  @media only screen and (min-width: 992px) {
+    .form-wizard.wizard-horizontal > ol > li {
+      display: inline-block;
+    }
+  }
+  .form-wizard.wizard-vertical:before,
+  .form-wizard.wizard-vertical:after {
+    content: " ";
+    display: table;
+  }
+  .form-wizard.wizard-vertical:after {
+    clear: both;
+  }
+  .form-wizard.wizard-vertical > ol {
+    float: left;
+    width: 39%;
+    padding: 0;
+  }
+  .form-wizard.wizard-vertical > ol > li {
+    display: block;
+    padding: 10px;
+  }
+  .form-wizard.wizard-vertical > ol > li h4 {
+    font-size: 14px;
+  }
+  .form-wizard.wizard-vertical > div {
+    float: right;
+    width: 59%;
+  }
+  .form-wizard.wizard-vertical .pager {
+    clear: both;
+    padding-top: 10px;
+  }
+  .form-wizard.wizard-vertical .well {
+    padding: 0;
+  }
+  .form-wizard .form-wizard-step {
+    padding: 20px;
+  }

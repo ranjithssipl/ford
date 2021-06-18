@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <!-- top navbar-->
+    <app-header class="topnavbar-wrapper"></app-header>
+    <!-- sidebar-->
+    <!-- <app-sidebar class="aside"></app-sidebar> -->
+    <!-- offsidebar-->
+    <!-- <app-offsidebar class="offsidebar"></app-offsidebar> -->
+    <!-- Main section-->
+    <section>
+        <!-- Page content-->
+        <div class="content-wrapper">
+            <!-- Breadcrumbs -->
+            <app-breadcrumbs></app-breadcrumbs>
+            
+            <!-- Toaster -->
+            <toaster-container [toasterconfig]="toasterConfig"></toaster-container>
+            
+            <router-outlet></router-outlet>
+        </div>
+    </section>
+    <!-- Page footer-->
+    <footer app-footer></footer>
+</div>

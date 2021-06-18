@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "module": "es2015",
+    "types": [
+      "node",
+      "jquery"
+    ]
+  },
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts"
+  ],
+  "include": [
+    "**/*",
+    "../node_modules/ng2-datetime/ng2-datetime.ts",
+    "../node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.ts",
+    "../node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.module.ts"
+  ]
+}

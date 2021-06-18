@@ -1,0 +1,13 @@
+<div class="content-heading">
+    <!-- Title -->
+    <!-- Small text for title-->
+    <!-- <span class="text-sm hidden-xs">Sub title</span> -->
+
+    <!-- Breadcrumb below title-->
+    <ul class="breadcrumb">
+        <li *ngFor="let crumb of crumbs; let i=index;" [ngClass]="{'active':isLastCrumb(i)}">
+            <a *ngIf="!isLastCrumb(i);else lastCrumb"  [innerHtml]="crumb.text"></a>
+            <ng-template #lastCrumb >{{crumb.text}}</ng-template>
+        </li>
+    </ul>
+</div>
